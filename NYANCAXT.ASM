@@ -25,9 +25,9 @@ main:
     mov cx, cs              
     int 21h
 
-    ; Allocate 320 KB RAM (20,000 paragraphs)
+    ; Allocate 276 KB RAM (17,300 paragraphs)
     mov ah, 48h             
-    mov bx, 20000           
+    mov bx, 17300     
     int 21h
     jnc .mem_ok
     
@@ -422,7 +422,7 @@ section .data
 filename    db "NYAN.RAW", 0
 msg_loading db "Loading Nyan to RAM $"
 err_file    db "Error: NYAN.RAW not found!$"
-err_mem     db "Error: Need 320KB free RAM$"
+err_mem     db "Error: Need 340KB free RAM$"
 
 align 2
 keyframe:
